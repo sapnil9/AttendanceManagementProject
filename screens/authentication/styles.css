@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../../assets/utd_roundabout.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex; /* Added */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    border-radius: 10px;
+    padding: 20px; /* Adjust as needed */
+    width: 300px;
+    height: 100%; /* Added */
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
