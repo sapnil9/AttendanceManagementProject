@@ -41,84 +41,53 @@ body {
   button:hover {
     background-color: #0056b3;
   }
+
+
+
   
   #error-message {
     color: red;
     margin-top: 10px;
   }
-  
-  /* Styles for the dashboard page */
-  
+
   .header1 {
     background-color: #1A6426; 
     color: #fff;
     padding: 20px;
     text-align: center;
   }
-  /*
-  .dashboard-container {
-    margin: 100px auto; 
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
   
-  .dashboard-container h2 {
-    text-align: center;
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    align-items: center; 
-    justify-content: center; 
-  }
-  
-  .dashboard-container .form-group {
-    margin-bottom: 30px;
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    align-items: center; 
-    justify-content: center; 
-  }
-  
-  .dashboard-container label {
-    display: block;
-    margin-bottom: 5px;
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    align-items: center; 
-    justify-content: center; 
-  }*/
   
   .dashboard-container button {
-    width: 100%;
+    width: 20%;
     padding: 20px;
+    border-radius: 40px;
     background-color: #1A6426;
     color: #ffffff;
     border: none;
-    border-radius: 2px;
     cursor: pointer;
   }
+
+  .submit_button {
+    margin: 0 auto; 
+    display: block; 
+
+}
+
+
   
-  .question-container {
+  .question {
     background-color: #fff;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    margin: auto;
-}
 
-.question {
+    margin: auto;
     margin-bottom: 20px;
 }
+
+
 
 .answers {
     margin-top: 10px;
