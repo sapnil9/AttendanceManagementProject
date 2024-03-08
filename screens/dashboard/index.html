@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-    
-    
+  <div class="header1">
+    <h1>Welcome to the Dashboard!</h1>
+  </div>
+
+  <div class="dashboard-container">
+    <h2 class="question">What is the capital of France?</h2>
+        <form class="answers">
+            <label for="paris">
+                <input type="radio" id="paris" name="capital" value="paris">
+                Paris
+            </label><br>
+            <label for="london">
+                <input type="radio" id="london" name="capital" value="london">
+                London
+            </label><br>
+            <label for="berlin">
+                <input type="radio" id="berlin" name="capital" value="berlin">
+                Berlin
+            </label><br>
+            <label for="rome">
+                <input type="radio" id="rome" name="capital" value="rome">
+                Rome
+            </label><br>
+        </form>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('quiz-form').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      
+
+      window.location.href = '../submission/index.html';
+    });
+  </script>
 </body>
 </html>
