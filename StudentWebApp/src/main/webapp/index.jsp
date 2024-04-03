@@ -32,7 +32,7 @@
 
       // Redirect to the dashboard page if validation passes
       if (utdId && password) {
-        window.location.href = 'dashboard.html'; // Replace 'dashboard.html' with the actual URL of your dashboard page
+        window.location.href = 'dashboard.jsp'; // Replace 'dashboard.html' with the actual URL of your dashboard page
       } else {
         // Display an error message if any field is empty
         document.getElementById('error-message').innerText = 'Please enter both UTD ID and password.';
