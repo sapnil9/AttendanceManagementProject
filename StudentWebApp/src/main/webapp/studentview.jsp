@@ -13,7 +13,7 @@
   <div class="login-container">
     <h2>Login</h2>
     <div class="form-group">
-      <label for="net_id">NET ID</label>
+      <label for="net_id">NET-ID</label>
       <input type="text" id="net_id" name="net_id" required>
     </div>
     <div class="form-group">
