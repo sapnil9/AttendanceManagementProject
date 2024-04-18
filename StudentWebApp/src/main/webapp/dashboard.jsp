@@ -1,59 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="studentviewcss.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="studentviewcss.css">
 </head>
 <body>
-  <div class="header1">
+<div class="header1">
     <h1>Welcome to the Dashboard!</h1>
-  </div>
+</div>
 
-  <div class="dashboard-container">
+<div class="dashboard-container">
     <h2>Quiz Questions</h2>
-    <form id="quiz-form">
-      <div class="form-group">
-        <label for="question1">Question 1:</label>
-        <div>
-          <input type="radio" id="question1_option1" name="question1" value="option1" required>
-          <label for="question1_option1">Option 1</label>
-        </div>
-        <div>
-          <input type="radio" id="question1_option2" name="question1" value="option2">
-          <label for="question1_option2">Option 2</label>
-        </div>
-        <!-- Add more options for question 1 if needed -->
-      </div>
-      <div class="form-group">
-        <label for="question2">Question 2:</label>
-        <div>
-          <input type="radio" id="question2_option1" name="question2" value="option1" required>
-          <label for="question2_option1">Option 1</label>
-        </div>
-        <div>
-          <input type="radio" id="question2_option2" name="question2" value="option2">
-          <label for="question2_option2">Option 2</label>
-        </div>
-        <!-- Add more options for question 2 if needed -->
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-    <div id="attendance-message" style="display: none;">Thank you for your attendance</div> <!-- Hidden by default -->
-  </div>
+    <div id="quiz-questions">
+        <!-- Quiz questions will be dynamically inserted here -->
+    </div>
+</div>
 
-  <script>
-    document.getElementById('quiz-form').addEventListener('submit', function(event) {
-      event.preventDefault();
+<script>
+    // Function to make AJAX request and update quiz questions
+    function fetchQuizQuestions() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("quiz-questions").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", "jdbc", true);
+        xhttp.send();
+    }
 
-      // Get the form element
-      var form = event.target;
-
-      // Display the attendance message
-      var attendanceMessage = document.getElementById('attendance-message');
-      attendanceMessage.style.display = 'block'; // Show the message
-      form.reset(); // Reset the form
-    });
-  </script>
+    // Call fetchQuizQuestions function to load quiz questions on page load
+    window.onload = fetchQuizQuestions;
+</script>
 </body>
 </html>
