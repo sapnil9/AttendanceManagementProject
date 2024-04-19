@@ -1,125 +1,90 @@
+/* General styling for the entire body of the webpage */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0; 
-  align-items: center; 
-  justify-content: center; 
+  font-family: Arial, sans-serif; /* Set the font for the entire webpage */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  align-items: center; /* Align vertically at the center  */
+  justify-content: center; /* Center content horizontally  */
 }
 
+/* Styling for the header section */
 .header {
-  background-color: #1A6426; 
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+  background-color: #1A6426; /* Dark green background */
+  color: #fff; /* White text color */
+  padding: 20px; /* Padding around text */
+  text-align: center; /* Center-align text */
 }
 
+/* Container for the login form elements */
 .login-container {
-  width: 300px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  align-items: center; 
-  justify-content: center; 
+  width: 300px; /* width: 300px */
+  margin: 50px auto; /* Margin top/bottom 50px, centered horizontally */
+  padding: 20px; /* Padding inside container */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 5px; /* Rounded corners */
+  align-items: center; /* Align items vertically at the center */
+  justify-content: center; /* Center content horizontally */
 }
 
+/* Styling for each form group, which includes a label and an input */
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Space below each form group */
 }
 
+/* Styles for labels in the form */
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* Space below the label */
 }
 
+/* Styling for text and password input fields */
 input[type="text"],
 input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  align-items: center; 
-  justify-content: center; 
+  width: 100%; /* Input takes full width */
+  padding: 10px; /* Padding inside input field */
+  margin-bottom: 10px; /* Margin below input field */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light grey border */
+  box-sizing: border-box; /* Width and height calculations (padding and border) */
 }
 
+/* General styles for buttons */
 button {
-  width: 100%;
-  padding: 20px;
-  background-color: #1A6426;
-  color: #ffffff;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
+  width: 100%; /* Button takes full width */
+  padding: 20px; /* Padding inside button */
+  background-color: #1A6426; /* Dark green background */
+  color: #ffffff; /* White text color */
+  border: none; /* No border */
+  border-radius: 2px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Hover effect for buttons */
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Change background color on hover to a medium blue */
 }
 
+/* Styles for error messages displayed under the form */
 #error-message {
-  color: red;
-  margin-top: 10px;
+  color: red; /* Red text color for errors */
+  margin-top: 10px; /* Margin above the error message */
 }
 
-/* Styles for the dashboard page */
-
+/* Additional styles for the header in the dashboard page */
 .header1 {
-  background-color: #1A6426; 
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-/*
-.dashboard-container {
-  margin: 100px auto; 
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: #1A6426; /* Dark green background */
+  color: #fff; /* White text color */
+  padding: 20px; /* Padding around the text */
+  text-align: center; /* Center-align the text */
 }
 
-.dashboard-container h2 {
-  text-align: center;
-  width: 300px;
-  margin: 100px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  align-items: center; 
-  justify-content: center; 
-}
-
-.dashboard-container .form-group {
-  margin-bottom: 30px;
-  width: 300px;
-  margin: 100px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  align-items: center; 
-  justify-content: center; 
-}
-
-.dashboard-container label {
-  display: block;
-  margin-bottom: 5px;
-  width: 300px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  align-items: center; 
-  justify-content: center; 
-}*/
-
+/* Styles for buttons in the dashboard container */
 .dashboard-container button {
-  width: 100%;
-  padding: 20px;
-  background-color: #1A6426;
-  color: #ffffff;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
+  width: 100%; /* Button takes full width of its parent container */
+  padding: 20px; /* Padding inside the button */
+  background-color: #1A6426; /* Dark green background */
+  color: #ffffff; /* White text color */
+  border: none; /* No border */
+  border-radius: 2px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
 }
-
