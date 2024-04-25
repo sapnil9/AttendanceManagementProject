@@ -29,9 +29,9 @@
                             "jdbc:mysql://34.173.191.42:3306/attendancedb", "root", "monK3yban@naBread3!@3%5");
 
                     // SQL query to select all questions linked to config_attendance
-                    String sql = "SELECT q.* FROM question q " +
-                            "JOIN configure_attendance ca ON " +
-                            "q.question_id IN (ca.question_id_1, ca.question_id_2, ca.question_id_3)";
+                    String sql = "SELECT q.* FROM question q" +
+                            "     JOIN configure_attendance ca ON" +
+                             "q.question_id IN(ca.question_id_1, ca.question_id_2, ca.question_id_3)";
                     stmt = conn.createStatement(); // Create a Statement object
                     rs = stmt.executeQuery(sql); // Execute the query and store the results in ResultSet
 
