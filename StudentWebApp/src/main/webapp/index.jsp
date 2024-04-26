@@ -2,6 +2,8 @@
 <%
   // Get parameters from the form submission
   String utdId = request.getParameter("utd_id");
+  java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
+  java.sql.Time currentTime = new java.sql.Time(System.currentTimeMillis());
   String password = request.getParameter("password");
   String errorMessage = null;
   boolean isAuthenticated = false;
@@ -19,20 +21,36 @@
               "jdbc:mysql://34.173.191.42:3306/attendancedb", "root", "monK3yban@naBread3!@3%5");
 
       // SQL query to authenticate the user. Checks if the entered UTD-ID has the password stored in the database.
-      String sql = "SELECT password FROM passwords INNER JOIN student ON student.class_id = passwords.class_id WHERE student.UTD_ID = ?";
+      String sql = "SELECT ca.config_atten_id, p.password FROM configure_attendance ca " +
+              "INNER JOIN passwords p ON ca.password_id = p.password_ID " +
+              "INNER JOIN student s ON p.class_id = s.class_id " +
+              "WHERE ca.date = ? AND ? BETWEEN ca.start_time AND ca.end_time " +
+              "AND s.UTD_ID = ?";
       ps = conn.prepareStatement(sql);
-      ps.setString(1, utdId);
+      Date dateValue = Date.valueOf("2024-04-25");
+      ps.setDate(1, dateValue);
+      Time timeValue = Time.valueOf("08:30:00");
+      ps.setTime(2, timeValue);
+      ps.setString(3, utdId);
       rs = ps.executeQuery();
+      //int config_atten_id;
+      //session.setAttribute("configId", config_atten_id);
+
 
       // Check if a password was returned and if it matches the one provided by the user
       if (rs.next() && password.equals(rs.getString("password"))) {
         isAuthenticated = true; // Set authenticated flag to true if match found
+        int config_atten_id = rs.getInt("config_atten_id");
+        System.out.println("config_atten_id value: " + config_atten_id);
+        session.setAttribute("configId", config_atten_id);
       } else {
         errorMessage = "Invalid UTD-ID or Password"; // Set error message for incorrect credentials
+        System.out.println(password);
       }
     } catch (Exception e) {
       e.printStackTrace(); // Log exception to server's log files
       errorMessage = "An error occurred."; // Set error message for exceptions
+      System.out.println("Error message1: " + e.getMessage() );
     } finally {
       // Close all database related objects
       if (rs != null) try { rs.close(); } catch (SQLException e) { /* ignored */ }
