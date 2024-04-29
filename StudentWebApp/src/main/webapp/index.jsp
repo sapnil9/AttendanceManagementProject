@@ -27,14 +27,12 @@
               "WHERE ca.date = ? AND ? BETWEEN ca.start_time AND ca.end_time " +
               "AND s.UTD_ID = ?";
       ps = conn.prepareStatement(sql);
-      Date dateValue = Date.valueOf("2024-04-25");
+      Date dateValue = Date.valueOf("2024-04-26");
       ps.setDate(1, dateValue);
       Time timeValue = Time.valueOf("08:30:00");
       ps.setTime(2, timeValue);
       ps.setString(3, utdId);
       rs = ps.executeQuery();
-      //int config_atten_id;
-      //session.setAttribute("configId", config_atten_id);
 
 
       // Check if a password was returned and if it matches the one provided by the user
